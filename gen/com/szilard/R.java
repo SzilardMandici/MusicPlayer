@@ -12,6 +12,7 @@ public final class R {
     }
     public static final class drawable {
 <<<<<<< HEAD
+<<<<<<< HEAD
         public static final int backgr=0x7f020000;
         public static final int icon=0x7f020001;
         public static final int music_backgr=0x7f020002;
@@ -22,6 +23,9 @@ public final class R {
         public static final int prev=0x7f050000;
         public static final int seekBar=0x7f050004;
         public static final int stop=0x7f050002;
+=======
+        public static final int icon=0x7f020000;
+>>>>>>> 103dac482af960895f58523854529fff3f03075c
 =======
         public static final int icon=0x7f020000;
 >>>>>>> 103dac482af960895f58523854529fff3f03075c

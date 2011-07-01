@@ -1,6 +1,5 @@
 package com.szilard;
 
-<<<<<<< HEAD
 import java.util.ArrayList;
 import java.util.List;
 
@@ -93,16 +92,3 @@ public class MusicPlayerActivity extends Activity implements OnClickListener {
 	
 
 }
-=======
-import android.app.Activity;
-import android.os.Bundle;
-
-public class MusicPlayerActivity extends Activity {
-    /** Called when the activity is first created. */
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.main);
-    }
-}
->>>>>>> 103dac482af960895f58523854529fff3f03075c
