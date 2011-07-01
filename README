@@ -1,0 +1,5 @@
+This is an android project where I want to implement a simple music player which when loaded looks for 
+all the mp3 files on the phone and puts them into a playlist. The user will be able to look at the lyrics 
+of the music which is displayed by the program based on the title and author of the song. Future 
+improvements plan a last.fm support and the ability to create custom playlists and using SQLite the
+program will monitor the changes and updates of music collection on the phone.
