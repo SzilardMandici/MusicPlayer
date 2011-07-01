@@ -81,12 +81,6 @@ public class MusicPlayerActivity extends Activity implements OnClickListener {
         	SeekBar sb = (SeekBar) findViewById(R.id.seekBar);
         	
         	
-        	while (mp.isPlaying())
-        	{
-        		
-        	sb.setProgress(mp.getCurrentPosition());
-        	
-        	}
 		
 	}
 	
