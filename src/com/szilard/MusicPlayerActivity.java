@@ -73,7 +73,7 @@ public class MusicPlayerActivity extends Activity implements OnClickListener {
 		case R.id.list: 
 		//I have to start a new activity where the user will select the song which 
 		//is to be played
-		startListAcivity();
+		startListActivity();
 		break;
 		
 		case R.id.exit:
@@ -87,7 +87,7 @@ public class MusicPlayerActivity extends Activity implements OnClickListener {
 
 
 
-	private void startListAcivity() {
+	private void startListActivity() {
 		
 		Intent listIntent;
 		
