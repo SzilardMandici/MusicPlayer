@@ -25,7 +25,7 @@ public class MusicPlayerActivity extends Activity implements OnClickListener {
 	private Button stopButton;
 	private Button nextButton;
 	private Button prevButton;
-	
+	private SingletonPlaylist playlist;
 	//some constants:
 	private final int SELECTION_REQUEST = 1;
 	
@@ -48,7 +48,7 @@ public class MusicPlayerActivity extends Activity implements OnClickListener {
 		nextButton.setOnClickListener(this);
 		prevButton.setOnClickListener(this);
 
-		
+		playlist = SingletonPlaylist.getInstance();
 	}
 	
 	
@@ -66,9 +66,10 @@ public class MusicPlayerActivity extends Activity implements OnClickListener {
 
 
 	@Override
-	public boolean onMenuItemSelected(int featureId, MenuItem item) {
+	public boolean onOptionsItemSelected(MenuItem item) {
+		// TODO Auto-generated method stub
 		
-		switch(featureId)
+		switch(item.getItemId())
 		{
 		case R.id.list: 
 		//I have to start a new activity where the user will select the song which 
@@ -78,11 +79,11 @@ public class MusicPlayerActivity extends Activity implements OnClickListener {
 		
 		case R.id.exit:
 		break;
-			
-		
+					
 		}
 		
 		return true;
+	
 	}
 
 
@@ -105,15 +106,33 @@ public class MusicPlayerActivity extends Activity implements OnClickListener {
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 		super.onActivityResult(requestCode, resultCode, data);
 		
+		
+		switch(requestCode)
+		{
+			case SELECTION_REQUEST:
+				if (resultCode == RESULT_OK)
+				{
+					String response = data.getStringExtra("SELECTED_MUSIC");
+					
+					Toast.makeText(this, response, Toast.LENGTH_LONG).show();
+					
+				}
+			break;
+				
+		}
+		
 	}
 
 
 
 	@Override
-	public void onClick(View v) {
+	public void onClick(View arg0) {
 		// TODO Auto-generated method stub
 		
 	}
+
+
+
 	
 
 }
