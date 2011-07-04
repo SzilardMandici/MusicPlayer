@@ -31,6 +31,11 @@ public class SingletonPlaylist {
 		playlist.add(song);
 	}
 	
+	public Song getSongById(int id)
+	{
+		return playlist.get(id);
+	}
+	
 	
 	
 }

@@ -20,7 +20,10 @@ import android.widget.SeekBar;
 import android.widget.Toast;
 
 public class MusicPlayerActivity extends Activity implements OnClickListener {
-
+	
+	//TODO: create an enum repreenting the current state of the player (playing, stopped, paused)
+	
+	MediaPlayer currentSong;
 	private Button playButton;
 	private Button stopButton;
 	private Button nextButton;
@@ -113,8 +116,8 @@ public class MusicPlayerActivity extends Activity implements OnClickListener {
 				if (resultCode == RESULT_OK)
 				{
 					String response = data.getStringExtra("SELECTED_MUSIC");
+					playSelectedSong(Integer.parseInt(response));
 					
-					Toast.makeText(this, response, Toast.LENGTH_LONG).show();
 					
 				}
 			break;
@@ -125,13 +128,24 @@ public class MusicPlayerActivity extends Activity implements OnClickListener {
 
 
 
-	@Override
-	public void onClick(View arg0) {
-		// TODO Auto-generated method stub
+	private void playSelectedSong(int songId) {
+		
+		Song localSong = playlist.getSongById(songId);
+		String uriString = localSong.getData();
+		Uri uri = Uri.parse(uriString);	
+		currentSong = MediaPlayer.create(this, uri);
+		
+		currentSong.start();
 		
 	}
 
 
+
+	@Override
+	public void onClick(View arg0) {
+		
+		
+	}
 
 	
 

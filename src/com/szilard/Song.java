@@ -23,4 +23,8 @@ public class Song {
 		this.display_name = display_name;
 	}
 
+	public String getData()
+	{
+		return data;
+	}
 }
