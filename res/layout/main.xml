@@ -5,6 +5,28 @@
     android:layout_height="wrap_content"
     android:background="@drawable/music_backgr"
     >
+    
+    <TextView 
+    android:id="@+id/currenttime"
+    android:layout_marginTop="65dp"
+    android:text="00:00"
+    android:layout_width= "fill_parent"
+    android:layout_height= "wrap_content"
+    android:gravity="center_horizontal"
+    android:textSize="30dp" android:textColor="#444"/>
+    
+    
+    <SeekBar android:id="@+id/seekBar"
+    android:layout_marginRight="20dp" 
+    android:layout_height="wrap_content" 
+    android:layout_width="match_parent" 
+    android:layout_marginLeft="20dp"
+    android:max="100"
+	android:progress="0"
+    >
+    
+    </SeekBar>
+    
     <LinearLayout
     android:layout_marginTop="20dp"
     android:orientation="horizontal"
@@ -13,7 +35,7 @@
    	android:gravity="bottom"
    	android:layout_marginBottom="40dp"
     >
-    
+   
     <Button
     android:id="@+id/prev"
     android:text="prev"
@@ -44,13 +66,6 @@
     
     </LinearLayout>
     
-    <SeekBar android:id="@+id/seekBar"
-    android:layout_marginRight="20dp" 
-    android:layout_height="wrap_content" 
-    android:layout_width="match_parent" 
-    android:layout_marginLeft="20dp">
-    
-    </SeekBar>
     
 
 
